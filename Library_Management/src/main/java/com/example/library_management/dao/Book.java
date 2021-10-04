@@ -15,7 +15,7 @@ public class Book {
     private Integer book_id;
 
     @Column(name = "book_Name")
-    private String book_Name;
+    private String bookName;
 
     @Column(name = "author_Name")
     private String author_Name;
@@ -31,7 +31,6 @@ public class Book {
     }
 
     public Book() {
-
     }
 
     public Integer getBook_id() {
@@ -42,12 +41,12 @@ public class Book {
         this.book_id = book_id;
     }
 
-    public String getBook_Name() {
-        return book_Name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBook_Name(String book_Name) {
-        this.book_Name = book_Name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public String getAuthor_Name() {

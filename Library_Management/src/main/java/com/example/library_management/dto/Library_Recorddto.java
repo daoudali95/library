@@ -18,9 +18,9 @@ public class Library_Recorddto {
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date return_date;
 
-    Integer book_id;
+    String bookName;
 
-    Integer member_id;
+    String memberName;
 
     public Library_Recorddto() {
     }
@@ -41,19 +41,19 @@ public class Library_Recorddto {
         this.return_date = return_date;
     }
 
-    public Integer getBook_id() {
-        return book_id;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBook_id(Integer book_id) {
-        this.book_id = book_id;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public Integer getMember_id() {
-        return member_id;
+    public String getMemberName() {
+        return memberName;
     }
 
-    public void setMember_id(Integer member_id) {
-        this.member_id = member_id;
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
 }

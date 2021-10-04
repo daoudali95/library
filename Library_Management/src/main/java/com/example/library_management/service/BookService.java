@@ -33,7 +33,7 @@ public class BookService {
         Book book = new Book();
 //        String publish= "" ;
 
-        book.setBook_Name(bookdto.getBook_Name());
+        book.setBookName(bookdto.getBook_Name());
         book.setAuthor_Name(bookdto.getAuthor_Name());
 
         Optional<Publisher> publisher = publisherRepository.findById(bookdto.getPublishers());

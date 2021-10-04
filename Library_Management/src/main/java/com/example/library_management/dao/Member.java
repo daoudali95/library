@@ -14,7 +14,7 @@ public class Member {
     private int member_id;
 
     @Column(name = "member_Name")
-    private String member_Name;
+    private String memberName;
 
     @Email
     @Column(name = "email")
@@ -34,12 +34,13 @@ public class Member {
         this.member_id = member_id;
     }
 
-    public String getMember_Name() {
-        return member_Name;
+
+    public String getMemberName() {
+        return memberName;
     }
 
-    public void setMember_Name(String member_Name) {
-        this.member_Name = member_Name;
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
 
     public String getEmail() {

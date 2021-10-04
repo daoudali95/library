@@ -1,7 +1,5 @@
 package com.example.library_management.dto;
 
-import java.util.List;
-
 public class Bookdto {
 
     private String book_Name;
@@ -12,7 +10,6 @@ public class Bookdto {
 
     public Bookdto() {
     }
-
 
     public String getBook_Name() {
         return book_Name;

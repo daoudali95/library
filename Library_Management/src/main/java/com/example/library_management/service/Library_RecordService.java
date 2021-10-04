@@ -7,6 +7,7 @@ import com.example.library_management.dto.Library_Recorddto;
 import com.example.library_management.repo.BookRepository;
 import com.example.library_management.repo.Library_RecordRepository;
 import com.example.library_management.repo.MemberRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -30,11 +31,11 @@ public class Library_RecordService {
         library_record.setIssue_date(library_recorddto.getIssue_date());
         library_record.setReturn_date(library_recorddto.getReturn_date());
 
-        Optional<Book> book = bookRepository.findById(library_recorddto.getBook_id());
-        if (book.isPresent())
-            library_record.setBook(book.get());
+        Optional<Book> bookRes = bookRepository.findByBookName(library_recorddto.getBookName());
+        if (bookRes.isPresent())
+            library_record.setBook(bookRes.get());
 
-        Optional<Member> member = memberRepository.findById(library_recorddto.getMember_id());
+        Optional<Member> member = memberRepository.findByMemberName(library_recorddto.getMemberName());
         if (member.isPresent())
             library_record.setMember(member.get());
 
